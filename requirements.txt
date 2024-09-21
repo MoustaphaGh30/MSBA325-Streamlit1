@@ -4,4 +4,4 @@ streamlit_folium
 plotly.express
 geopandas
 arabic_reshaper
-bidi.algorithm
+python-bidi
