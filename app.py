@@ -4,7 +4,6 @@ import folium as fl
 from folium.plugins import HeatMap
 from streamlit_folium import st_folium
 import plotly.express as px
-from PIL import Image
 import geopandas as gpd
 import matplotlib.pyplot as plt
 from io import BytesIO
@@ -27,7 +26,7 @@ def get_gdf():
     merged_df=pd.read_csv('district_data.csv')
 
     #put your own path here
-    shapefile_path = r'C:\Users\Moustapha\Desktop\MSBA\325\presentation\presentation 2\presentation 2\lbn_admbnda_adm2_cdr_20200810.shp'
+    shapefile_path = 'lbn_admbnda_adm2_cdr_20200810.shp'
 
     gdf = gpd.read_file(shapefile_path)
     gdf = gdf.applymap(lambda x: x.strftime('%Y-%m-%d') if isinstance(x, pd.Timestamp) else x)
